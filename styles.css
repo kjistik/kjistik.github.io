@@ -5,6 +5,30 @@
   box-sizing: border-box;
 }
 
+/* Add to top of CSS */
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#languageBtn {
+    background: #6E8894;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+#languageBtn:hover {
+    background: #5A717A;
+    transform: scale(1.05);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {

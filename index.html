@@ -8,21 +8,20 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤓</text></svg>">
 </head>
 <body>
-  <!-- Header Section -->
+  <div class="language-toggle">
+    <button id="languageBtn">EN/ES</button>
+  </div>
+
   <header class="header">
     <h1>Martín Coronel</h1>
-    <p class="tagline">Backend Developer | APIs • Databases • Cloud</p>
+    <p class="tagline" data-translate="tagline"></p>
   </header>
 
-  <!-- About Section -->
   <section class="section about">
-    <h2>About Me</h2>
-    <p class="about-text">
-      I'm a backend developer with expertise in building scalable systems (mainly in Java), 
-      designing databases, and erecting RESTful APIs. Currently familiarizing myself with horizontally scalable architectures and microservices.
-    </p>
+    <h2 data-translate="aboutTitle"></h2>
+    <p class="about-text" data-translate="aboutText"></p>
     <div class="skills">
-      <h3>Skills</h3>
+      <h3 data-translate="skillsTitle"></h3>
       <ul class="skills-list">
         <li>Spring</li>
         <li>VPS management</li>
@@ -42,30 +41,25 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section class="section projects">
-    <h2>Projects</h2>
+    <h2 data-translate="projectsTitle"></h2>
     <div class="projects-container">
       <div class="projects-carousel">
-        <!-- Project 1 -->
         <div class="project-slide">
           <div class="project-card">
-            <h3>Authorization API</h3>
-            <p>A REST API for Authorization using JWT. Built over Spring Authorization Server using Spring WebFlux, a PostgreSQL and Redis for session management and device fingerprinting</p>
+            <h3 data-translate="project1Title"></h3>
+            <p data-translate="project1Desc"></p>
             <a href="https://github.com/kjistik/auth_server_komodo" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
           </div>
         </div>
-        
-        <!-- Project 2 -->
         <div class="project-slide">
           <div class="project-card">
-            <h3>JWT Validator</h3>
-            <p>A small java wrapper library meant to avoid code repetition in my microservices.</p>
+            <h3 data-translate="project2Title"></h3>
+            <p data-translate="project2Desc"></p>
             <a href="https://central.sonatype.com/artifact/io.github.kjistik/jwt-validator" class="project-link" target="_blank" rel="noopener noreferrer">Maven Central →</a>
           </div>
         </div>
       </div>
-      
       <div class="carousel-controls">
         <button class="carousel-nav prev">↑</button>
         <div class="carousel-dots"></div>
@@ -74,13 +68,12 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="section contact">
-    <h2>Contact</h2>
+    <h2 data-translate="contactTitle"></h2>
     <div class="contact-links">
-      <a href="mailto:coronelmartinernesto@gmail.com" class="contact-link">Email</a>
-      <a href="https://github.com/kjistik" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://linkedin.com/in/kjistik" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:coronelmartinernesto@gmail.com" class="contact-link" data-translate="email"></a>
+      <a href="https://github.com/kjistik" class="contact-link" target="_blank" rel="noopener noreferrer" data-translate="github"></a>
+      <a href="https://linkedin.com/in/kjistik" class="contact-link" target="_blank" rel="noopener noreferrer" data-translate="linkedin"></a>
     </div>
   </section>
 
