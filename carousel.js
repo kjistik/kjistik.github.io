@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Theme System
+  let currentTheme = localStorage.getItem('theme') || 'light';
+  document.body.setAttribute('data-theme', currentTheme);
+
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.body.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('theme', currentTheme);
+  });
+
   // Carousel Logic
   const carousel = document.querySelector('.projects-carousel');
   const slides = document.querySelectorAll('.project-slide');
@@ -64,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
       linkedin: "LinkedIn"
     },
     es: {
-      tagline: "Desarrollador Backend | APIs • Bases de Datos • Cloud",
-      aboutTitle: "Acerca de mi",
+      tagline: "Desarrollador Backend | APIs • Bases de Datos • Nube",
+      aboutTitle: "Acerca de Mi",
       aboutText: "Soy desarrollador backend con experiencia en construcción de sistemas escalables (principalmente en Java), diseño de bases de datos y creación de APIs REST. Actualmente aprendiendo sobre arquitecturas distribuidas y microservicios.",
       skillsTitle: "Habilidades",
       projectsTitle: "Proyectos",
@@ -83,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentLang = localStorage.getItem('lang') || 'en';
 
   function updateContent() {
-    // Update all translatable elements
     Object.entries(translations[currentLang]).forEach(([key, value]) => {
       document.querySelectorAll(`[data-translate="${key}"]`).forEach(element => {
         element.textContent = value;
@@ -97,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateContent();
   });
 
-  // Initialize everything
+  // Initialize
   initializeCarousel();
   updateContent();
   document.querySelector('.carousel-nav.next').addEventListener('click', nextSlide);
